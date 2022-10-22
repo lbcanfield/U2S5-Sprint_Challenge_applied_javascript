@@ -1,6 +1,5 @@
 const Header = (title, date, temp) => 
 {
-  console.log ( title );
   // Instantiate HTML DOM elements
   const headerDiv = document.createElement("div");
   const dateSpan = document.createElement("span");
@@ -44,7 +43,6 @@ const headerAppender = (selector) =>
   const testObj = document.querySelector( selector );
   testObj.appendChild( Header("Lambda Times", Date(), "100\u00B0")); 
 
-  console.log(testObj);
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.

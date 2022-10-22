@@ -1,4 +1,27 @@
-const Header = (title, date, temp) => {
+const Header = (title, date, temp) => 
+{
+  console.log ( title );
+  // Instantiate HTML DOM elements
+  const headerDiv = document.createElement("div");
+  const dateSpan = document.createElement("span");
+  const header = document.createElement("h1");
+  const tempSpan = document.createElement("span");
+
+  // Updating classList for DOM elements
+  headerDiv.classList.add("header");
+  dateSpan.classList.add("date");
+  tempSpan.classList.add("temp");
+
+  // Instituting DOM hierarchy
+  headerDiv.appendChild( dateSpan );
+  headerDiv.appendChild( header );
+  headerDiv.appendChild( tempSpan );
+
+  // Adding component parameter values to elements
+  dateSpan.textContent = date;
+  header.textContent = title;
+  tempSpan.textContent = temp;
+
   // TASK 1
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
@@ -11,9 +34,17 @@ const Header = (title, date, temp) => {
   //    <span class="temp">{ temp }</span>
   //  </div>
   //
+  return headerDiv;
 }
 
-const headerAppender = (selector) => {
+
+
+const headerAppender = (selector) => 
+{
+  const testObj = document.querySelector( selector );
+  testObj.appendChild( Header("foo", "bar", "baz")); //UPDATE THIS******************************************************
+
+  console.log(testObj);
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.

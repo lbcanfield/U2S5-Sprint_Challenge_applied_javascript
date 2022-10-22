@@ -42,7 +42,7 @@ const Header = (title, date, temp) =>
 const headerAppender = (selector) => 
 {
   const testObj = document.querySelector( selector );
-  testObj.appendChild( Header("foo", "bar", "baz")); //UPDATE THIS******************************************************
+  testObj.appendChild( Header("Lambda Times", Date(), "100\u00B0")); 
 
   console.log(testObj);
   // TASK 2
